@@ -269,9 +269,15 @@ body{
     </section>
 
     <section id="resume" class="section">
-        <h2>Resume</h2>
+    <h2>Resume</h2>
 
-        <a href="#" class="resume-btn">Download Resume</a>
+    <a href="SadiaAsghar_DataAnalyst.pdf" target="_blank" class="resume-btn">
+        View Resume
+    </a>
+
+    <a href="SadiaAsghar_DataAnalyst.pdf" download class="resume-btn" style="margin-left:10px;">
+        Download Resume
+    </a>
     </section>
 
     <section id="contact" class="section">
@@ -280,11 +286,36 @@ body{
         <p>
             Email: sadia_asghar@ymail.com<br>
             LinkedIn: www.linkedin.com/in/sadia-asghar-abb0b5265<br>
-            GitHub: https://sadiaasghar-dot.github.io/
+            GitHub: https://github.com/SadiaAsghar-dot
         </p>
     </section>
 
 </div>
+    <script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".menu a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+
+        if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
