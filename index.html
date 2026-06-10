@@ -164,7 +164,26 @@ body{
     border-radius: 8px;
     border: 1px solid #ddd;
 }
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
 
+.project-gallery img {
+    width: 30%;
+    min-width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.03);
+}
 .resume-btn{
     display:inline-block;
     background:#D2691E;
@@ -327,6 +346,13 @@ body{
             <li>Interactive dashboards for decision support</li>
             <li>Enterprise reporting automation</li>
         </ul>
+        <div class="project-gallery">
+    <img src="1stPowerBI.jpg" alt="Power BI Dashboard Overview">
+            <P>Executive KPI Dashboard – Revenue, Sales Performance, Product Impact & Business Insights</P>
+    <img src="2ndPowerBI.jpg" alt="Power BI Sales Analysis">
+            <p>Sales & Operational Analytics Dashboard – Branch Performance, Category Analysis & Trend Monitoring</p>
+    <img src="3rdPowerBI.jpg" alt="Power BI Inventory Analysis">
+</div>
     </div>
 
     <!-- 2 TABLEAU -->
